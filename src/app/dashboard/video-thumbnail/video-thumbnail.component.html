@@ -1,0 +1,5 @@
+<!--<p>video-thumbnail works!</p>-->
+<ng-container *ngIf="video">
+  <img src="https://img.youtube.com/vi/{{video.id}}/hqdefault.jpg" [alt]="video.title" style="width: 100%">
+  {{video.title}} {{video.author}}
+</ng-container>

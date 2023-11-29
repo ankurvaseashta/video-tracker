@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import "@picocss/pico/css/pico.css";
+
+ul il {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.highlighted {
+  background: yellow;
+}
+
+//.font-size-med{
+//  font-size: 30px
+//}
+
+.fontsize-medium {
+  font-size: medium;
+}
+
+//.overflow-y{
+//  overflow-y: scroll;
+//}
+
+.padding-10 {
+  padding: 10px;
+}
+

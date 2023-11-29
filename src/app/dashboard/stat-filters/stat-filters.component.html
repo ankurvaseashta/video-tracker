@@ -1,0 +1,62 @@
+<form class="padding-10" [formGroup]="filters" (ngSubmit)="submit()">
+  <!-- Grid -->
+  <div class="grid">
+
+    <!-- Markup example 1: input is inside label -->
+    <label for="search">
+      Filter Views
+      <input type="text" id="search" name="search" placeholder="Search..." [formControl]="filters.controls.search">
+    </label>
+  </div>
+
+  <fieldset>
+    <legend>Regions:</legend>
+    <label for="North America">
+      <input type="radio" id="North America" value="North America" [formControl]="filters.controls.region" >
+      North America
+    </label>
+    <label for="Asia">
+      <input type="radio" id="Asia" value="Asia" [formControl]="filters.controls.region">
+      Asia
+    </label>
+    <label for="Europe">
+      <input type="radio" id="Europe" value="Europe" [formControl]="filters.controls.region">
+      Europe
+    </label>
+    <label for="All">
+      <input type="radio" id="All" value="All" disabled>
+      All
+    </label>
+  </fieldset>
+
+    Date Range
+  <label for="start">From</label>
+  <input type="date" id="start" name="start" value="2023-01-01" min="2018-01-01" max="2050-12-31" />
+  <label for="start">To</label>
+  <input type="date" id="to" name="to" value="2023-01-01" min="2018-01-01" max="2050-12-31" />
+
+  <legend style="padding-top: 2rem">Age Groups</legend>
+  <div>
+    <input type="checkbox" id="under-18" name="under-18" checked />
+    <label for="under-18">Under 18</label>
+  </div>
+  <div>
+    <input type="checkbox" id="18-40" name="under-18" checked />
+    <label for="18-40">Under 18</label>
+  </div>
+  <div>
+    <input type="checkbox" id="40-60" name="under-18" checked />
+    <label for="40-60">40 - 60</label>
+  </div>
+  <div>
+    <input type="checkbox" id="over-60" name="under-18" checked />
+    <label for="over-60">Over 60</label>
+  </div>
+
+  <!-- Buttons -->
+  <div style="padding-top: 2rem">
+    <button type="submit" [disabled]="!filters.valid">Submit</button>
+    <button type="reset">Reset</button>
+  </div>
+
+</form>

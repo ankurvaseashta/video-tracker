@@ -1,0 +1,5 @@
+<ul>
+  <li class="fontsize-medium padding-10 overflow-y" *ngFor="let video of videoList" (click)="selectVideo(video)" [class.highlighted]="video.id === selectedVideo?.id">
+    <app-video-thumbnail [video]="video"></app-video-thumbnail>
+  </li>
+</ul>
