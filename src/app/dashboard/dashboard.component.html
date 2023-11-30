@@ -1,6 +1,9 @@
 <div class="nav">
-  Video Statistic Tracker
-  <a class="dashboard-nav-link" href="http://localhost:4200/dashboard/">Dashboard</a>
+  <a class="text-decoration-none" href="http://localhost:4200/dashboard">Video Statistic Tracker</a>
+  <div class="dashboard-nav-link padding-10">
+    <a class="text-decoration-none" href="http://localhost:4200/dashboard">Dashboard</a>
+    <a class="padding-10 text-decoration-none" href="http://localhost:4200/dashboard">Login</a>
+  </div>
 </div>
 <div class="grid" *ngIf="videoListData | async as videos">
   <div class="list">
