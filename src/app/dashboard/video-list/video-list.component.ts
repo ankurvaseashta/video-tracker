@@ -15,7 +15,8 @@ export class VideoListComponent {
   @Input({required:true}) videoList! : Video[]
   @Output() videoChanged = new EventEmitter<Video>();
 
-  selectedVideo?:Video ;
+  selectedVideo?:Video;
+
   selectVideo(video:Video){
     this.selectedVideo = video
     this.videoChanged.emit(video);

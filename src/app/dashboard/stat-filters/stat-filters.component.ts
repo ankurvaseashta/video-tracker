@@ -26,8 +26,8 @@ export class StatsFiltersComponent {
     this.filters = fb.group({
       search: [''],
       region: ['', Validators.required],
-      startdate:[''],
-      enddate:[''],
+      startdate:['', Validators.required],
+      enddate:['', Validators.required],
       ageGroup1:[''],
       ageGroup2:[''],
       ageGroup3:[''],
