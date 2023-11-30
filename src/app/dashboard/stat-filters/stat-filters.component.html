@@ -10,22 +10,24 @@
 
   <fieldset>
     <legend class="fontsize-larger">Regions</legend>
-    <label class="fontsize-medium" for="North America">
-      <input type="radio" id="North America" value="North America" [formControl]="filters.controls.region">
-      North America
-    </label>
-    <label class="fontsize-medium" for="Asia">
-      <input type="radio" id="Asia" value="Asia" [formControl]="filters.controls.region">
-      Asia
-    </label>
-    <label class="fontsize-medium" for="Europe">
-      <input type="radio" id="Europe" value="Europe" [formControl]="filters.controls.region">
-      Europe
-    </label>
-    <label class="fontsize-medium" for="All">
-      <input type="radio" id="All" value="All" disabled>
-      All
-    </label>
+    <span>
+      <label class="fontsize-medium" for="North America">
+        <input type="radio" id="North America" value="North America" [formControl]="filters.controls.region">
+        North America
+      </label>
+      <label class="fontsize-medium" for="Asia">
+        <input type="radio" id="Asia" value="Asia" [formControl]="filters.controls.region">
+        Asia
+      </label>
+      <label class="fontsize-medium" for="Europe">
+        <input type="radio" id="Europe" value="Europe" [formControl]="filters.controls.region">
+        Europe
+      </label>
+      <label class="fontsize-medium" for="All">
+        <input type="radio" id="All" value="All" disabled>
+        All
+      </label>
+    </span>
   </fieldset>
 
   <fieldset>
@@ -55,9 +57,9 @@
   </fieldset>
 
   <!-- Buttons -->
-  <div style="padding-top: .5rem">
-    <button type="submit" [disabled]="!filters.valid">Submit</button>
-    <button type="reset">Reset</button>
+  <div class="buttons-container">
+    <button class="left" type="submit" [disabled]="!filters.valid">Submit</button>
+    <button class="right" type="reset">Reset</button>
   </div>
 
 </form>

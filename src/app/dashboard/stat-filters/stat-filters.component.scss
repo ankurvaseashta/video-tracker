@@ -24,3 +24,17 @@ input {
   padding-left: 1rem;
 }
 
+.buttons-container {
+  padding-top: 1rem;
+  display: flex;
+  margin: 1rem;
+}
+
+.left{
+  float:left;
+}
+
+.right{
+  float:left;
+  margin-left: 1rem;
+}
