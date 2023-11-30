@@ -14,16 +14,24 @@ export class StatsFiltersComponent {
   filters:FormGroup<{
     search : FormControl<string | null>;
     region : FormControl<string | null>;
-    date : FormControl<string | null>;
-    age : FormControl<number | null>;
+    startdate : FormControl<string | null>;
+    enddate : FormControl<string | null>;
+    ageGroup1 : FormControl<any | null>;
+    ageGroup2 : FormControl<any | null>;
+    ageGroup3 : FormControl<any | null>;
+    ageGroup4 : FormControl<any | null>;
   }>
 
   constructor(fb:FormBuilder) {
     this.filters = fb.group({
       search: [''],
       region: ['', Validators.required],
-      date:[''],
-      age:[0]
+      startdate:[''],
+      enddate:[''],
+      ageGroup1:[''],
+      ageGroup2:[''],
+      ageGroup3:[''],
+      ageGroup4:['']
     })
   }
 

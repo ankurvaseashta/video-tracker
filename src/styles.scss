@@ -15,7 +15,11 @@ ul il {
 //}
 
 .fontsize-medium {
-  font-size: medium;
+  font-size: medium !important;
+}
+
+.fontsize-larger {
+  font-size: larger !important;
 }
 
 //.overflow-y{

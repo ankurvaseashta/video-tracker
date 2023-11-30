@@ -1,60 +1,61 @@
 <form class="padding-10" [formGroup]="filters" (ngSubmit)="submit()">
   <!-- Grid -->
   <div class="grid">
-
     <!-- Markup example 1: input is inside label -->
     <label for="search">
-      Filter Views
+      <legend class="fontsize-larger">Filter Views</legend>
       <input type="text" id="search" name="search" placeholder="Search..." [formControl]="filters.controls.search">
     </label>
   </div>
 
   <fieldset>
-    <legend>Regions:</legend>
-    <label for="North America">
-      <input type="radio" id="North America" value="North America" [formControl]="filters.controls.region" >
+    <legend class="fontsize-larger">Regions</legend>
+    <label class="fontsize-medium" for="North America">
+      <input type="radio" id="North America" value="North America" [formControl]="filters.controls.region">
       North America
     </label>
-    <label for="Asia">
+    <label class="fontsize-medium" for="Asia">
       <input type="radio" id="Asia" value="Asia" [formControl]="filters.controls.region">
       Asia
     </label>
-    <label for="Europe">
+    <label class="fontsize-medium" for="Europe">
       <input type="radio" id="Europe" value="Europe" [formControl]="filters.controls.region">
       Europe
     </label>
-    <label for="All">
+    <label class="fontsize-medium" for="All">
       <input type="radio" id="All" value="All" disabled>
       All
     </label>
   </fieldset>
 
-    Date Range
-  <label for="start">From</label>
-  <input type="date" id="start" name="start" value="2023-01-01" min="2018-01-01" max="2050-12-31" />
-  <label for="start">To</label>
-  <input type="date" id="to" name="to" value="2023-01-01" min="2018-01-01" max="2050-12-31" />
+  <fieldset>
+    <legend class="fontsize-larger">Date Range</legend>
+    <label class="fontsize-medium" for="start">From</label>
+    <input type="date" id="start" name="start" value="mm/dd/yyyy" min="1999-01-01" max="2100-12-31" [formControl]="filters.controls.startdate">
+    <label class="fontsize-medium" for="start">To</label>
+    <input type="date" id="to" name="to" value="mm/dd/yyyy" min="1999-01-01" max="2100-12-31" [formControl]="filters.controls.enddate">
 
-  <legend style="padding-top: 2rem">Age Groups</legend>
-  <div>
-    <input type="checkbox" id="under-18" name="under-18" checked />
-    <label for="under-18">Under 18</label>
-  </div>
-  <div>
-    <input type="checkbox" id="18-40" name="under-18" checked />
-    <label for="18-40">Under 18</label>
-  </div>
-  <div>
-    <input type="checkbox" id="40-60" name="under-18" checked />
-    <label for="40-60">40 - 60</label>
-  </div>
-  <div>
-    <input type="checkbox" id="over-60" name="under-18" checked />
-    <label for="over-60">Over 60</label>
-  </div>
+    <legend class="padding-top-10 fontsize-larger">Age Groups</legend>
+    <div>
+      <input type="checkbox" id="under-18" name="under-18" [formControl]="filters.controls.ageGroup1">
+      <label class="padding-left-10 fontsize-medium" for="under-18">Under 18</label>
+    </div>
+    <div>
+      <input type="checkbox" id="18-40" name="18-40" [formControl]="filters.controls.ageGroup2">
+      <label class="padding-left-10 fontsize-medium" for="18-40">18-40</label>
+    </div>
+    <div>
+      <input type="checkbox" id="40-60" name="40-60" [formControl]="filters.controls.ageGroup3">
+      <label class="padding-left-10 fontsize-medium" for="40-60">40 - 60</label>
+    </div>
+    <div>
+      <input type="checkbox" id="over-60" name="over-60" [formControl]="filters.controls.ageGroup4">
+      <label class="padding-left-10 fontsize-medium" for="over-60">Over 60</label>
+    </div>
+  </fieldset>
 
   <!-- Buttons -->
-  <div style="padding-top: 2rem">
+  <div style="padding-top: .5rem">
     <button type="submit" [disabled]="!filters.valid">Submit</button>
     <button type="reset">Reset</button>
   </div>
