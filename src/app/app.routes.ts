@@ -4,11 +4,10 @@ export const routes: Routes = [
   {
     path: '',
     redirectTo: 'dashboard',
-    pathMatch: 'full'
-  }
-  ,
+    pathMatch: 'full',
+  },
   {
     path: 'dashboard',
-    loadComponent:() => import('./dashboard/dashboard.component')
-  }
+    loadComponent: () => import('./dashboard/dashboard.component'),
+  },
 ];

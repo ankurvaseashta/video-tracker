@@ -8,10 +8,9 @@ describe('VideoThumbnailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [VideoThumbnailComponent]
-    })
-    .compileComponents();
-    
+      imports: [VideoThumbnailComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(VideoThumbnailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

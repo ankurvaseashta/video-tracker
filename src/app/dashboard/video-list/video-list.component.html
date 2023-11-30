@@ -1,6 +1,11 @@
 <legend class="fontsize-larger padding-10">Top Ten Preview</legend>
 <ul>
-  <li class="fontsize-medium padding-10" *ngFor="let video of videoList" (click)="selectVideo(video)" [class.highlighted]="video.id === selectedVideo?.id">
+  <li
+    class="fontsize-medium padding-10"
+    *ngFor="let video of videoList"
+    (click)="selectVideo(video)"
+    [class.highlighted]="video.id === selectedVideo?.id"
+  >
     <app-video-thumbnail [video]="video"></app-video-thumbnail>
   </li>
 </ul>

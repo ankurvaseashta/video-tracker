@@ -8,10 +8,9 @@ describe('VideoListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [VideoListComponent]
-    })
-    .compileComponents();
-    
+      imports: [VideoListComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(VideoListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
