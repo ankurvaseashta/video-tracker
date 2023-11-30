@@ -10,10 +10,6 @@ ul il {
   background: yellow;
 }
 
-//.font-size-med{
-//  font-size: 30px
-//}
-
 .fontsize-medium {
   font-size: medium !important;
 }
@@ -22,15 +18,15 @@ ul il {
   font-size: larger !important;
 }
 
-//.overflow-y{
-//  overflow-y: scroll;
-//}
-
 .padding-10 {
   padding: 10px;
 }
 
-.video-list {
+img {
+  border-radius: 5px 5px 5px 5px;
+}
+
+.list {
   height: 100vh;
   overflow-y: scroll;
 }

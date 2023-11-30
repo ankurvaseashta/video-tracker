@@ -1,16 +1,19 @@
+<div class="nav">
+  Video Statistic Tracker
+</div>
 <div class="grid" *ngIf="videoListData | async as videos">
-  <div class="video-list">
+  <div class="list">
     <app-video-list
       [videoList]="videos ?? []"
       (videoChanged)="handleVideoChanged($event)"
     ></app-video-list>
   </div>
-  <div>
+  <div class="padding-10">
     <app-video-player
       [video]="(selectedVideo | async) ?? videos[0]"
     ></app-video-player>
   </div>
-  <div>
-    <app-stat-filters class="app-stat"></app-stat-filters>
+  <div class="list">
+    <app-stat-filters class="filter-views"></app-stat-filters>
   </div>
 </div>

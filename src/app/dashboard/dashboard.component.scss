@@ -3,20 +3,20 @@
   grid-template-columns: 1fr 2fr 1fr;
 }
 
-.app-stat {
+.filter-views {
   line-height: 1rem;
 }
 
-//.width-800 {
-//  height: auto !important;
-//  max-width: 100% !important;
-//  width: 800px !important;
-//}
-
-//.border-black {
-//  border: black solid 2px;
-//}
-
-//.overflow-y {
-//  overflow-y: scroll;
-//}
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary);
+  color: #fff;
+  display: flex;
+  padding: 0 16px;
+  align-items: center;
+  height: 56px;
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+  font-size: larger;
+}
