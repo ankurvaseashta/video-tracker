@@ -19,4 +19,33 @@
   height: 56px;
   font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
   font-size: larger;
+  list-style-type: none;
 }
+
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: red;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+.dashboard-nav-link {
+  margin-left: auto;
+  margin-right: 0;
+  text-decoration: none;
+}
+
+
