@@ -1,12 +1,11 @@
-<!--<div class="grid">-->
-<!--  <div >-->
-<!--    <app-video-list [videoList]="videoListData ?? []" (videoChanged) = handleVideoChanged($event)></app-video-list>-->
-    <app-video-list [videoList]="(videoListData | async) ?? []" (videoChanged) = handleVideoChanged($event)></app-video-list>
-<!--  </div>-->
-<!--  <div>-->
-    <app-video-player class="padding-10" [video]="selectedVideo"></app-video-player>
-<!--  </div>-->
-<!--  <div>-->
+<div class="grid" *ngIf="(videoListData | async) as videos">
+  <div class="video-list">
+    <app-video-list [videoList]="videos ?? [] " (videoChanged) = handleVideoChanged($event)></app-video-list>
+  </div>
+  <div>
+    <app-video-player [video]="(selectedVideo | async) ?? videos[0]"></app-video-player>
+  </div>
+  <div>
     <app-stat-filters></app-stat-filters>
-<!--  </div>-->
-<!--</div>-->
+  </div>
+</div>
