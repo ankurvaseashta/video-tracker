@@ -1,4 +1,5 @@
-<form class="padding-10" [formGroup]="filters" (ngSubmit)="submit()">
+<form class="padding-10 card" [formGroup]="filters" (ngSubmit)="submit()">
+  <div class="container">
   <!-- Grid -->
   <div class="grid">
     <!-- Markup example 1: input is inside label -->
@@ -123,5 +124,6 @@
       Submit
     </button>
     <button class="right" type="reset">Reset</button>
+  </div>
   </div>
 </form>
