@@ -2,6 +2,10 @@ ul li {
   list-style-type: none;
 }
 
+.padding-top {
+  padding-top: 4rem;
+}
+
 .video-list {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2);
@@ -21,4 +25,17 @@ ul li {
 .video-list:active {
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.5);
   background: green;
+}
+
+.video-list-title {
+  position: fixed;
+  border: 2px black var(--primary);
+  border-radius: 1rem;
+  padding: 10px;
+  background-color: var(--primary);
+  transform: translate(5rem, .5rem);
+  font-size: larger;
+  padding: 1rem;
+  text-align: center;
+  color: white;
 }
