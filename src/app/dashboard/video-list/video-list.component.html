@@ -1,7 +1,7 @@
 <legend class="fontsize-larger padding-10">Top Ten Preview</legend>
 <ul>
   <li
-    class="fontsize-medium padding-10"
+    class="fontsize-medium padding-10 video"
     *ngFor="let video of videoList"
     (click)="selectVideo(video)"
     [class.highlighted]="video.id === selectedVideo?.id"

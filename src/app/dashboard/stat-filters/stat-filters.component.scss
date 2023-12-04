@@ -25,25 +25,26 @@ input {
 }
 
 .buttons-container {
-  padding-top: 1rem;
+  padding-left: 1rem;
   display: flex;
   margin: 1rem;
-}
 
-.left {
-  float: left;
-}
 
-.right {
-  float: right;
-  margin-left: 1rem;
+  .button-left {
+    float: left;
+  }
+
+  .button-right {
+    float: right;
+    margin-left: 1rem;
+  }
 }
 
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  background: lightblue;
+  background: inherit;
   padding-right: 2rem;
   border-radius: 1rem;
   border: 2px solid black;
@@ -53,9 +54,10 @@ input {
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.5);
+  background: yellow;
 }
 
 /* Add some padding inside the card container */
-.container {
+.card-container {
   padding: 2px 16px;
 }
